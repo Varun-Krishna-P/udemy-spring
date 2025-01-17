@@ -7,4 +7,14 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan(basePackages = "org.example")
 public class AppConfig {
+
+    @Bean
+    public Game game(){
+        return new GameImpl(numberGenerator());
+    }
+
+    @Bean
+    public NumberGenerator numberGenerator(){
+        return new NumberGeneratorImpl();
+    }
 }
