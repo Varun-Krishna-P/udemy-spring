@@ -16,7 +16,7 @@ public class GameImpl implements Game{
     private int remainingGuesses;
     private boolean validNumberRange;
 
-    public GameImpl(NumberGenerator numberGenerator) {
+    public void setNumberGenerator(NumberGenerator numberGenerator) {
         this.numberGenerator = numberGenerator;
     }
 
